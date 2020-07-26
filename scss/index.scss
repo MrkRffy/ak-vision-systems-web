@@ -1,0 +1,136 @@
+@import "./_variables";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;600;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+main {
+    overflow: hidden;
+}
+
+header {
+    overflow: hidden;
+
+    .nav-item {
+
+        &.active {
+
+            .nav-link {
+                color: $color-accent !important;
+                border-bottom: 3px solid $color-accent;
+            }
+        }
+
+        .nav-link {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 1px;
+            color: rgba(#fff, .3);
+        }
+    }
+}
+
+.wave-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+footer {
+    overflow: hidden;
+
+    .contact-container {
+        background: linear-gradient(to top, $color-secondary 50%, #fff 50%);
+
+        .contact-item {
+            background: #fff;
+            box-shadow: 0px 0px 10px rgba($color-primary, .1);
+            text-align: center;
+            font-size: 16px;
+            border-radius: 10px;
+            font-weight: 600;
+
+            svg {
+                margin-right: 10px;
+            }
+
+            .contact-number {
+                font-weight: 600;
+            }
+        }
+    }
+
+    .footer-container {
+        background: $color-secondary;
+
+        .footer-item {
+            border-top: 1px solid rgba($color-primary, .1);
+            border-bottom: 1px solid rgba($color-primary, .1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 90px;
+
+            @media (max-width: 992px) {
+                border-left: none !important;
+                border-right: none !important;
+            }
+
+            a {
+                font-weight: 700;
+                margin: 0px 10px;
+                letter-spacing: 2px;
+                color: $color-primary;
+
+                @media (max-width: 440px) {
+                    font-size: 12px;
+                    margin: 0px 5px;
+                }
+
+                &:nth-child(odd) {
+                    color: $color-accent;
+                }
+            }
+
+            .btn {
+                color: #fff;
+                font-size: 12px;
+                box-shadow: 0px 0px 10px rgba($color-primary, .5);
+                font-weight: 600;
+                letter-spacing: 2px;
+                padding: 12px;
+                border-radius: 5px;
+
+                &:hover {
+                    box-shadow: 0px 0px 20px rgba($color-primary, .5);
+                }
+
+                &.btn-facebook {
+                    background: #4267B2;
+                }
+
+                &.btn-twitter {
+                    background: #52A8E7;
+                }
+            }
+        }
+
+        img {
+            width: 150px;
+        }
+    }
+
+    .copyright-container {
+        font-size: 14px;
+        background: $color-secondary;
+        font-weight: 400;
+    }
+}
